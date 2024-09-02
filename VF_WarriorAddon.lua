@@ -94,13 +94,31 @@ function VF_WA_OnEvent()
 			dmg = 0;
 			actionStatus = "Dodge";
 		end
+
+		if(spellEffect == nil or creature == nil or dmg == nil) then
+			_, _, spellEffect, creature = string.find(arg1, "Your (.*) is parried by (.*).");
+			dmg = 0;
+			actionStatus = "Parry";
+		end
+
+		if(spellEffect == nil or creature == nil or dmg == nil) then
+			_, _, spellEffect, creature = string.find(arg1, "Your (.*) was blocked by (.*).");
+			dmg = 0;
+			actionStatus = "Block";
+		end
 		
 		if(spellEffect == nil or creature == nil or dmg == nil) then
 			actionStatus = "Unknown";
 		end
-		if((actionStatus == "Miss" or actionStatus == "Resist" or actionStatus == "Dodge") and spellEffect == "Mocking Blow") then
-			SendChatMessage("Mocking Blow Resisted!", "RAID");
-			SendChatMessage("Mocking Blow Resisted!", "PARTY");
+		if((actionStatus == "Miss" 
+			or actionStatus == "Resist"
+			or actionStatus == "Dodge"
+			or actionStatus == "Parry"
+			or actionStatus == "Block")
+			and spellEffect == "Mocking Blow")
+		then
+			SendChatMessage("Mocking Blow Failed!", "RAID");
+			SendChatMessage("Mocking Blow Failed!", "PARTY");
 		elseif(actionStatus == "Resist" and spellEffect == "Taunt") then
 			SendChatMessage("Taunt Resisted!", "RAID");
 			SendChatMessage("Taunt Resisted!", "PARTY");
