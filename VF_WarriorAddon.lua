@@ -1,5 +1,7 @@
---VF_WarriorAddon
+--VF_WarriorAddon 
 --Written by Dilatazu @ EmeraldDream @ www.EmeraldDream.com / www.wow-one.com
+--Updated by Otari98 @https://github.com/Otari98/VF_WarriorAddon
+--Updated by Krautchanpro "Dirtyclaws" for all tanks and TurtleWoW support @https://github.com/krautchanpro/VF_WarriorAddon-All-Tanks
 
 VF_WA_Version = "1.0";
 
@@ -47,6 +49,12 @@ function VF_WA_OnEvent()
 			elseif(gainWhat == "Shield Wall") then
 				SendChatMessage("Shield Wall is activated for "..VF_ShieldWallTime.." seconds!", "RAID");
 				SendChatMessage("Shield Wall is activated for "..VF_ShieldWallTime.." seconds!", "PARTY");
+                        elseif(gainWhat == "Berserk") then
+				SendChatMessage("Berserk is activated for 20 seconds!", "RAID");
+				SendChatMessage("Berserk is activated for 20 seconds!", "PARTY");
+			elseif(gainWhat == "Frenzied Regeneration") then
+				SendChatMessage("Frenzied Regeneration is activated for 10 seconds!", "RAID");
+				SendChatMessage("Frenzied Regeneration is activated for 10 seconds!", "PARTY");
 			else
 				VF_WA_DebugPrint("I gained "..gainWhat);
 			end
@@ -62,6 +70,12 @@ function VF_WA_OnEvent()
 				g_ChallengingShoutCastTime = -1;
 			elseif(spellEffect == "Mocking Blow") then
 				VF_WA_DebugPrint("This message should never be shown!");
+                        elseif(spellEffect == "Growl") then
+				g_GrowlCastTime = -1;
+                        elseif(spellEffect == "Challenging Roar") then
+				g_ChallengingRoarCastTime = -1;
+                        elseif(spellEffect == "Judgement of Justice") then
+				g_JudgementofJusticeCastTime = -1;
 			else
 				VF_WA_DebugPrint(spellEffect.." on "..creature.." was successful!");
 			end
@@ -125,6 +139,15 @@ function VF_WA_OnEvent()
 		elseif(actionStatus == "Resist" and spellEffect == "Challenging Shout") then
 			SendChatMessage("Challenging Shout Resisted!", "RAID");
 			SendChatMessage("Challenging Shout Resisted!", "PARTY");
+                elseif(actionStatus == "Resist" and spellEffect == "Growl") then
+			SendChatMessage("Growl Resisted!", "RAID");
+			SendChatMessage("Growl Resisted!", "PARTY");
+		elseif(actionStatus == "Resist" and spellEffect == "Challenging Roar") then
+			SendChatMessage("Challenging Roar Resisted!", "RAID");
+			SendChatMessage("Challenging Roar Resisted!", "PARTY");
+                elseif(actionStatus == "Resist" and spellEffect == "Judgement of Justice") then
+			SendChatMessage("Judgement of Justice Resisted!", "RAID");
+			SendChatMessage("Judgement of Justice Resisted!", "PARTY");
 		elseif(actionStatus == "Unknown") then
 			VF_WA_DebugPrint("UNPARSED3: "..arg1);
 		end
