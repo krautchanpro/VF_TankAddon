@@ -2,7 +2,7 @@
 ## Title: VF_WarriorAddon
 ## Author: Dilatazu (EmeraldDream @ www.emeralddream.com) Dilatazu@gmail.com Updated by Otari98 and Krautchanpro
 ## Version: 1.0
-## Notes: 
+## Notes: Updated by Otari98 and further by Krautchanpro to support all tanks and TurtleWoW
 ## Dependencies: 
 ## OptionalDeps: 
 ## SavedVariablesPerCharacter: 
