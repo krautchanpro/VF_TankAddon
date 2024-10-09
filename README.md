@@ -16,7 +16,7 @@ Warrior: Missed Mocking Blow
 
 Warrior: Resisted Taunt
 
-Druid: Berserk
+Druid: Berserk *Will display twice in party and raid due to it having 2 effects with the same name*
 
 Druid: Frenzied Regeneration
 
