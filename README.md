@@ -1,4 +1,4 @@
-# VF_WarriorAddon
+# VF_WarriorAddon Updated for All Tanks
 
 Author: [Dilatazu](https://github.com/Dilatazu) Updated by [Otari98](https://github.com/Otari98) Updated for all tanks by [krautchanpro](https://github.com/krautchanpro)
 
