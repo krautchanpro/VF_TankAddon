@@ -1,6 +1,6 @@
 ## Interface: 11200
 ## Title: VF_WarriorAddon
-## Author: Dilatazu (EmeraldDream @ www.emeralddream.com) Dilatazu@gmail.com
+## Author: Dilatazu (EmeraldDream @ www.emeralddream.com) Dilatazu@gmail.com Updated by Otari98 and Krautchanpro
 ## Version: 1.0
 ## Notes: 
 ## Dependencies: 
