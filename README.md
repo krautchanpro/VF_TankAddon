@@ -1,13 +1,29 @@
 # VF_WarriorAddon
 
-Author: [Dilatazu](https://github.com/Dilatazu)
+Author: [Dilatazu](https://github.com/Dilatazu) Updated by [Otari98](https://github.com/Otari98} Updated for all tanks by [krautchanpro](https://github.com/krautchanpro)
 
 Announces the following in party and raid chat:
 
-- Last Stand
-- Shield Wall
-- Challenging Shout
+Warrior: Last Stand
 
-- Resisted Challenging Shout
-- Missed Mocking Blow
-- Resisted Taunt
+Warrior: Shield Wall
+
+Warrior: Challenging Shout
+
+Warrior: Resisted Challenging Shout
+
+Warrior: Missed Mocking Blow
+
+Warrior: Resisted Taunt
+
+Druid: Berserk
+
+Druid: Frenzied Regeneration
+
+Druid: Challenging Roar
+
+Druid: Resisted Challenging Roar
+
+Druid: Resisted Growl
+
+Paladin: Resisted Judgement of Justice
