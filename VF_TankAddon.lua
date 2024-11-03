@@ -80,6 +80,8 @@ function VF_TA_OnEvent()
 				g_GrowlCastTime = -1;
                         elseif(spellEffect == "Challenging Roar") then
 				g_ChallengingRoarCastTime = -1;
+		                SendChatMessage("Challenging Roar Activated!", "RAID");
+			        SendChatMessage("Challenging Roar Activated!", "PARTY");
                         elseif(spellEffect == "Hand of Reckoning") then
 				g_HandofReckoningCastTime = -1;
 		        elseif(spellEffect == "Earthshaker Slam") then
