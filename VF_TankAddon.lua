@@ -68,22 +68,22 @@ function VF_TA_OnEvent()
 			VF_TA_DebugPrint("UNPARSED1: "..arg1);
 		end
 	elseif(event == "CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE") then
-		  local _, _, creature, spellEffect = string.find(arg1, "(.*) is afflicted by (.*).");
+		  --[[local _, _, creature, spellEffect = string.find(arg1, "(.*) is afflicted by (.*).");
 		  if(creature ~= nil and spellEffect ~= nil) then
 			if(spellEffect == "Taunt") then
 				g_TauntCastTime = -1;
 			elseif(spellEffect == "Challenging Shout") then
 				g_ChallengingShoutCastTime = -1;
-				SendChatMessage("Challenging Shout Activated!", "RAID");
-			        SendChatMessage("Challenging Shout Activated!", "PARTY");
+				SendChatMessage("Challenging Shout Activated for 6 seconds!", "RAID");
+			        SendChatMessage("Challenging Shout Activated for 6 seconds!", "PARTY");
 			elseif(spellEffect == "Mocking Blow") then
 				VF_TA_DebugPrint("This message should never be shown!");
                         elseif(spellEffect == "Growl") then
 				g_GrowlCastTime = -1;
                         elseif(spellEffect == "Challenging Roar") then
 				g_ChallengingRoarCastTime = -1;
-		                SendChatMessage("Challenging Roar Activated!", "RAID");
-			        SendChatMessage("Challenging Roar Activated!", "PARTY");
+		                SendChatMessage("Challenging Roar Activated for 6 seconds!", "RAID");
+			        SendChatMessage("Challenging Roar Activated for 6 seconds!", "PARTY");
                         elseif(spellEffect == "Hand of Reckoning") then
 				g_HandofReckoningCastTime = -1;
 		        elseif(spellEffect == "Earthshaker Slam") then
