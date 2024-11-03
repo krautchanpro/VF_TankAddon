@@ -1,5 +1,5 @@
 ## Interface: 11200
-## Title: VF_WarriorAddon
+## Title: VF_TankAddon
 ## Author: Dilatazu (EmeraldDream @ www.emeralddream.com) Dilatazu@gmail.com Updated by Otari98 and Krautchanpro
 ## Version: 1.0
 ## Notes: Updated by Otari98 and further by Krautchanpro "Dirtyclaws" to support all tanks and TurtleWoW
@@ -7,5 +7,5 @@
 ## OptionalDeps: 
 ## SavedVariablesPerCharacter: 
 ## SavedVariables: 
-VF_WarriorAddon.xml
-VF_WarriorAddon.lua
+VF_TankAddon.xml
+VF_TankAddon.lua
