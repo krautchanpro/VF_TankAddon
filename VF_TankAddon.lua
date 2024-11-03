@@ -68,12 +68,14 @@ function VF_TA_OnEvent()
 			VF_TA_DebugPrint("UNPARSED1: "..arg1);
 		end
 	elseif(event == "CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE") then
-		--[[local _, _, creature, spellEffect = string.find(arg1, "(.*) is afflicted by (.*).");
-		if(creature ~= nil and spellEffect ~= nil) then
+		  local _, _, creature, spellEffect = string.find(arg1, "(.*) is afflicted by (.*).");
+		  if(creature ~= nil and spellEffect ~= nil) then
 			if(spellEffect == "Taunt") then
 				g_TauntCastTime = -1;
 			elseif(spellEffect == "Challenging Shout") then
 				g_ChallengingShoutCastTime = -1;
+				SendChatMessage("Challenging Shout Activated!", "RAID");
+			        SendChatMessage("Challenging Shout Activated!", "PARTY");
 			elseif(spellEffect == "Mocking Blow") then
 				VF_TA_DebugPrint("This message should never be shown!");
                         elseif(spellEffect == "Growl") then
