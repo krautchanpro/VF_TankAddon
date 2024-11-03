@@ -18,6 +18,8 @@ Warrior: Resisted Taunt
 
 Druid: Berserk *Will display twice in party and raid due to it having 2 effects with the same name*
 
+Druid: Barkskin(Feral)
+
 Druid: Frenzied Regeneration
 
 Druid: Challenging Roar
@@ -26,4 +28,8 @@ Druid: Resisted Challenging Roar
 
 Druid: Resisted Growl
 
-Paladin: Resisted Judgement of Justice
+Paladin: Bulwark of the Righteous
+
+Paladin: Resisted Hand of Reckoning
+
+Shaman: Resisted Earthshaker Slam
