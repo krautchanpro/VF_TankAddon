@@ -1,6 +1,6 @@
 # VF_TankAddon (Formerly VF_WarriorAddon) Updated for All Tanks with TurtleWoW Support
 
-Author: [Dilatazu](https://github.com/Dilatazu) Updated by [Otari98](https://github.com/Otari98) Updated for all tanks and support TurtleWoW abilities by Dirtyclaws [krautchanpro](https://github.com/krautchanpro)
+Author: Original [Dilatazu](https://github.com/Dilatazu) Updated by [Otari98](https://github.com/Otari98) Updated for all tanks and support TurtleWoW abilities by Dirtyclaws [krautchanpro](https://github.com/krautchanpro)
 
 Announces the following in party and raid chat:
 
