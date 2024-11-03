@@ -1,11 +1,11 @@
---VF_WarriorAddon 
+--VF_TankAddon 
 --Written by Dilatazu @ EmeraldDream @ www.EmeraldDream.com / www.wow-one.com
 --Updated by Otari98 @https://github.com/Otari98/VF_WarriorAddon
---Updated by Krautchanpro "Dirtyclaws" for all tanks and TurtleWoW support @https://github.com/krautchanpro/VF_WarriorAddon-All-Tanks
+--Updated by Krautchanpro "Dirtyclaws" for all tanks and TurtleWoW support @https://github.com/krautchanpro/VF_TankAddon
 
-VF_WA_Version = "1.0";
+VF_TA_Version = "1.0";
 
-function VF_WA_OnLoad()
+function VF_TA_OnLoad()
 	--this:RegisterEvent("CHAT_MSG_SPELL_SELF_BUFF");
 	this:RegisterEvent("CHAT_MSG_SPELL_SELF_DAMAGE");
 	this:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS");
@@ -17,7 +17,7 @@ end
 
 g_DebugMode = false;
 
-function VF_WA_DebugPrint(theText)
+function VF_TA_DebugPrint(theText)
 	if(g_DebugMode == true) then
 		DEFAULT_CHAT_FRAME:AddMessage(theText, 1, 1, 0);
 	end
@@ -39,7 +39,7 @@ function VF_GetBuffCount(unitID, buffIcon)
 	return 0;
 end
 
-function VF_WA_OnEvent()
+function VF_TA_OnEvent()
 	if(event == "CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS") then
 		local _, _, gainWhat = string.find(arg1, "You gain (.*).");
 		if(gainWhat ~= nil) then
@@ -62,10 +62,10 @@ function VF_WA_OnEvent()
 				SendChatMessage("Bulwark of the Righteous is activated for 12 seconds!", "RAID");
 				SendChatMessage("Bulwark of the Righteous is activated for 12 seconds!", "PARTY");
 			else
-				VF_WA_DebugPrint("I gained "..gainWhat);
+				VF_TA_DebugPrint("I gained "..gainWhat);
 			end
 		else
-			VF_WA_DebugPrint("UNPARSED1: "..arg1);
+			VF_TA_DebugPrint("UNPARSED1: "..arg1);
 		end
 	elseif(event == "CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE") then
 		--[[local _, _, creature, spellEffect = string.find(arg1, "(.*) is afflicted by (.*).");
@@ -75,7 +75,7 @@ function VF_WA_OnEvent()
 			elseif(spellEffect == "Challenging Shout") then
 				g_ChallengingShoutCastTime = -1;
 			elseif(spellEffect == "Mocking Blow") then
-				VF_WA_DebugPrint("This message should never be shown!");
+				VF_TA_DebugPrint("This message should never be shown!");
                         elseif(spellEffect == "Growl") then
 				g_GrowlCastTime = -1;
                         elseif(spellEffect == "Challenging Roar") then
@@ -85,10 +85,10 @@ function VF_WA_OnEvent()
 		        elseif(spellEffect == "Earthshaker Slam") then
 				g_EarthshakerSlamCastTime = -1;
 			else
-				VF_WA_DebugPrint(spellEffect.." on "..creature.." was successful!");
+				VF_TA_DebugPrint(spellEffect.." on "..creature.." was successful!");
 			end
 		else
-			VF_WA_DebugPrint("UNPARSED2: "..arg1);
+			VF_TA_DebugPrint("UNPARSED2: "..arg1);
 		end--]]
 	elseif(event == "CHAT_MSG_SPELL_SELF_DAMAGE") then
 		local actionStatus = "Hit";
@@ -160,20 +160,20 @@ function VF_WA_OnEvent()
 			SendChatMessage("Earthshaker Slam Resisted!", "RAID");
 			SendChatMessage("Earthshaker Slam Resisted!", "PARTY");
 		elseif(actionStatus == "Unknown") then
-			VF_WA_DebugPrint("UNPARSED3: "..arg1);
+			VF_TA_DebugPrint("UNPARSED3: "..arg1);
 		end
 	elseif(event == "VF_INSTANT_SUCCESSFULL_SPELLCAST") then
-		VF_WA_DebugPrint("Instant Cast Spell: "..arg1);
+		VF_TA_DebugPrint("Instant Cast Spell: "..arg1);
 	else
 		if(arg1 == nil) then
-			VF_WA_DebugPrint("UNPARSED4: "..event);
+			VF_TA_DebugPrint("UNPARSED4: "..event);
 		else
-			VF_WA_DebugPrint("UNPARSED4: "..event..arg1);
+			VF_TA_DebugPrint("UNPARSED4: "..event..arg1);
 		end
 	end
 	--AURAADDEDOTHERHARMFUL == %s is afflicted by %s.
 end
 
-function VF_WA_OnUpdate()
+function VF_TA_OnUpdate()
 	g_CurrTime = GetTime();
 end
