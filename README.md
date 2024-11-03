@@ -8,8 +8,6 @@ Warrior: Last Stand
 
 Warrior: Shield Wall
 
-Warrior: Challenging Shout
-
 Warrior: Resisted Challenging Shout
 
 Warrior: Missed Mocking Blow
@@ -21,8 +19,6 @@ Druid: Berserk *Will display twice in party and raid due to it having 2 effects 
 Druid: Barkskin(Feral)
 
 Druid: Frenzied Regeneration
-
-Druid: Challenging Roar
 
 Druid: Resisted Challenging Roar
 
