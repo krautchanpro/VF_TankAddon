@@ -2,7 +2,7 @@
 ## Title: VF_TankAddon
 ## Author: Dilatazu (EmeraldDream @ www.emeralddream.com) Dilatazu@gmail.com Updated by Otari98 and Krautchanpro
 ## Version: 1.0
-## Notes: Announces your tank survival abilities and missed taunts for all tank classes
+## Notes: Announces your major tank survival abilities and missed taunts for all tank classes
 ## Dependencies: 
 ## OptionalDeps: 
 ## SavedVariablesPerCharacter: 
