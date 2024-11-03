@@ -55,6 +55,12 @@ function VF_WA_OnEvent()
 			elseif(gainWhat == "Frenzied Regeneration") then
 				SendChatMessage("Frenzied Regeneration is activated for 10 seconds!", "RAID");
 				SendChatMessage("Frenzied Regeneration is activated for 10 seconds!", "PARTY");
+			elseif(gainWhat == "Barkskin (Feral)") then
+				SendChatMessage("Barkskin(Feral) is activated for 12 seconds!", "RAID");
+				SendChatMessage("Barkskin(Feral) is activated for 12 seconds!", "PARTY");
+			elseif(gainWhat == "Bulwark of the Righteous") then
+				SendChatMessage("Bulwark of the Righteous is activated for 12 seconds!", "RAID");
+				SendChatMessage("Bulwark of the Righteous is activated for 12 seconds!", "PARTY");
 			else
 				VF_WA_DebugPrint("I gained "..gainWhat);
 			end
@@ -74,8 +80,10 @@ function VF_WA_OnEvent()
 				g_GrowlCastTime = -1;
                         elseif(spellEffect == "Challenging Roar") then
 				g_ChallengingRoarCastTime = -1;
-                        elseif(spellEffect == "Judgement of Justice") then
-				g_JudgementofJusticeCastTime = -1;
+                        elseif(spellEffect == "Hand of Reckoning") then
+				g_HandofReckoningCastTime = -1;
+		        elseif(spellEffect == "Earthshaker Slam") then
+				g_EarthshakerSlamCastTime = -1;
 			else
 				VF_WA_DebugPrint(spellEffect.." on "..creature.." was successful!");
 			end
@@ -145,9 +153,12 @@ function VF_WA_OnEvent()
 		elseif(actionStatus == "Resist" and spellEffect == "Challenging Roar") then
 			SendChatMessage("Challenging Roar Resisted!", "RAID");
 			SendChatMessage("Challenging Roar Resisted!", "PARTY");
-                elseif(actionStatus == "Resist" and spellEffect == "Judgement of Justice") then
-			SendChatMessage("Judgement of Justice Resisted!", "RAID");
-			SendChatMessage("Judgement of Justice Resisted!", "PARTY");
+                elseif(actionStatus == "Resist" and spellEffect == "Hand of Reckoning") then
+			SendChatMessage("Hand of Reckoning Resisted!", "RAID");
+			SendChatMessage("Hand of Reckoning Resisted!", "PARTY");
+		elseif(actionStatus == "Resist" and spellEffect == "Earthshaker Slam") then
+			SendChatMessage("Earthshaker Slam Resisted!", "RAID");
+			SendChatMessage("Earthshaker Slam Resisted!", "PARTY");
 		elseif(actionStatus == "Unknown") then
 			VF_WA_DebugPrint("UNPARSED3: "..arg1);
 		end
