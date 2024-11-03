@@ -2,7 +2,7 @@
 ## Title: VF_TankAddon
 ## Author: Dilatazu (EmeraldDream @ www.emeralddream.com) Dilatazu@gmail.com Updated by Otari98 and Krautchanpro
 ## Version: 1.0
-## Notes: Updated by Otari98 and further by Krautchanpro "Dirtyclaws" to support all tanks and TurtleWoW
+## Notes: Announces your tank survival abilities and missed taunts for all tank classes
 ## Dependencies: 
 ## OptionalDeps: 
 ## SavedVariablesPerCharacter: 
